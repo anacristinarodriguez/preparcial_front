@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    background:white;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn{
+    color: white;
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer; 
+    border-color:rgb(86, 86, 86); 
+    padding: 7px;
+    background-color: rgb(187, 187, 187);
+    border-radius: 5px;
+    width: 70px;
+}
+
+.btn:hover {
+    background-color: rgb(86, 86, 86);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.lista{
+    display:grid;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fotos{
+    border-radius: 50%;
+    width: 100px;  
+    height: 100px; 
+    margin-bottom: 30px;   
+}
+
+.info{
+    color:black;
+    flex:1;
+    margin-bottom: 30px;
+    
+}
+
+.nombre{
+    color:black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.titulo{
+    color:black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.autor {
+    display: flex;          
+    align-items: center;    
+    gap: 20px;              
+    margin: 12px; 
+}
+
+.botones{
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 10px; 
+    gap: 7px;
+}
+
+.btnEditar {
+    color: rgb(10, 81, 245);
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer; 
+    border-color:rgb(86, 86, 86); 
+    padding: 7px;
+    background-color: rgb(229, 238, 248);
+    border-radius: 5px;
+    width: 70px;
+}
+
+.btnEditar:hover {
+    background-color: rgb(10, 81, 245);
+    color: rgb(255, 255, 255);
+}
+
+.btnEliminar {
+    color: rgb(221, 62, 62);
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer; 
+    border-color:rgb(86, 86, 86); 
+    padding: 7px;
+    background-color: rgb(250, 231, 231);
+    border-radius: 5px;
+    width: 70px;
+}
+
+.btnEliminar:hover {
+    background-color: rgb(221, 62, 62);
+    color: rgb(255, 255, 255);
+}
+
+  
+  
