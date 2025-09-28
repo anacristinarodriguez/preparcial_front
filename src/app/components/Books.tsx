@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-
 interface LibroProps {
   id: number;           
   name: string;         
@@ -13,6 +12,10 @@ interface LibroProps {
   editorial: string;    
 }
 
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/+$/, "") ||
+  "http://localhost:8080";
+
 const BookList = () => {
   
   const [books, setBooks] = useState<LibroProps[]>([]);
@@ -20,7 +23,7 @@ const BookList = () => {
 
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8080/api/books")
+    fetch('${API_BASE}/api/books')
       .then((response) => response.json())
       .then((data) => setBooks(data))
       .catch((err) => console.error("Error cargando libros:", err));

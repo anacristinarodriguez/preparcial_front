@@ -11,20 +11,25 @@ interface AuthorsProps{
   image: string;
 }
 
+const API_BASE =
+  process.env.NEXT_PUBLIC_API_BASE_URL?.replace(/\/+$/, "") ||
+  "http://localhost:8080";
+
 const AuthorList = () => {
   const [authors, setAuthors] = useState<AuthorsProps[]>([]);
   const router = useRouter();
 
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8080/api/authors")
+    fetch(`${API_BASE}/api/authors`)
       .then((response) => response.json())
-      .then((data) => setAuthors(data));
+      .then((data) => setAuthors(data))
+      .catch((err) => console.error("Error cargando autores:", err));
   }, []);
 
   const Delete = async (id: number) => {
     try {
-      const res = await fetch(`http://127.0.0.1:8080/api/authors/${id}`, { method: "DELETE" });
+      const res = await fetch(`${API_BASE}/api/authors/${id}`, { method: "DELETE" });
       if (res.ok) {
         setAuthors((prev) => prev.filter((a) => a.id !== id));
         router.refresh();

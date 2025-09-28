@@ -36,7 +36,7 @@ const FormLibro: React.FC = () => {
 
     try {
     
-      const res = await fetch('http://127.0.0.1:8080/api/books', {
+      const res = await fetch('${API_BASE}/api/books', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(Object.fromEntries(
