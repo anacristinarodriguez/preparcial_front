@@ -17,6 +17,16 @@ export default function Home() {
             Crear Autor
           </button>
         </Link>
+          <Link href="/crearLibro">
+          <button className={StyleSheet.btn}>
+            Crear Libro
+          </button>
+        </Link>
+        <Link href="/libros">
+          <button className={StyleSheet.btn}>
+            Ver Libros
+          </button>
+        </Link>
       </div>  
     </main>
   );
